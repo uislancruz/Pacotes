@@ -28,6 +28,10 @@ public class Produto {
 
         this.nome = nome;
         this.quantidadeEstoque = estoqueInicial;
-        this.codigo = UUID.randomUUID().toString();
+        this.codigo = gerarCodigo();
+    }
+
+    private String gerarCodigo(){
+       return UUID.randomUUID().toString();
     }
 }
